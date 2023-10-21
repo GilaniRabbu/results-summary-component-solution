@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'HankenGrotesk';
+  font-family: 'Hanken Grotesk';
   font-display: swap;
   font-weight: 100 900;
-  src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+  src: url('font/HankenGrotesk.ttf');
 }
 
 :root {
@@ -25,18 +25,16 @@
   --clr-primary-500: hsla(var(--clr-primary-hsl-500));
   --clr-secondary-400: hsl(var(--clr-secondary-hsl-400));
 
-  --gradient-primary: linear-gradient(var(--clr-primary-400),
-      var(--clr-secondary-400));
+  --gradient-primary: linear-gradient(var(--clr-primary-400), var(--clr-secondary-400));
 
-  --gradient-to-transparent: linear-gradient(var(--clr-primary-500),
-      hsl(var(--clr-secondary-hsl-500), 0));
+  --gradient-to-transparent: linear-gradient(var(--clr-primary-500), hsl(var(--clr-secondary-hsl-500), 0));
 
   --clr-accent-1: 0, 100%, 67%;
   --clr-accent-2: 39, 100%, 56%;
   --clr-accent-3: 166, 100%, 37%;
   --clr-accent-4: 234, 85%, 45%;
 
-  --font-family-default: 'HankenGrotesk', sans-serif;
+  --font-base: 'Hanken Grotesk', sans-serif;
 
   --fw-regular: 500;
   --fw-bold: 700;
@@ -69,27 +67,27 @@ svg {
 
 body {
   font-size: var(--fs-400);
-  font-family: var(--font-family-default);
+  font-family: var(--font-base);
   color: var(--clr-neutral-700);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   body {
-    min-height: 100vh;
     display: grid;
     place-items: center;
+    min-height: 100vh;
   }
 }
 
-/* Custom CSS */
+/* Reset */
 
 
 
 /* Title */
 
 .section-title {
-  font-weight: var(--fw-bold);
   font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
 }
 
 /* Title */
@@ -127,7 +125,7 @@ body {
   display: grid;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .result-summary {
     margin-inline: 1rem;
     grid-template-columns: 1fr 1fr;
@@ -151,7 +149,7 @@ body {
   padding: var(--padding) calc(var(--padding) * 1.5);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .result {
     border-radius: var(--border-radius);
   }
@@ -189,8 +187,8 @@ body {
 
 .grid-flow {
   display: grid;
-  align-content: start;
   gap: 1rem;
+  align-content: start;
 }
 
 .grid-flow[data-spacing="large"] {
@@ -199,9 +197,9 @@ body {
 
 .flex-group {
   display: flex;
+  gap: 0.5rem;
   align-items: center;
   flex-wrap: wrap;
-  gap: .5rem;
 }
 
 /* Grid Flow */
